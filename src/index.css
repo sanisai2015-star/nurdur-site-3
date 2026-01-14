@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap');
+
+@layer base {
+  :root {
+    --primary: 210 100% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    --accent: 45 100% 50%;
+    --accent-foreground: 210 100% 15%;
+
+    --background: 0 0% 100%;
+    --foreground: 210 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 30% 15%;
+
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 210 30% 15%;
+
+    --muted: 210 20% 96%;
+    --muted-foreground: 210 10% 45%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 210 100% 35%;
+
+    --radius: 0.75rem;
+
+    --construction-dark: 210 30% 10%;
+    --construction-steel: 210 10% 60%;
+    --construction-concrete: 30 5% 85%;
+  }
+
+  [dir='rtl'] {
+    font-family: 'Tajawal', sans-serif;
+  }
+
+  [dir='ltr'] {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(
+      to right,
+      hsla(210, 30%, 5%, 0.92) 0%,
+      hsla(210, 30%, 5%, 0.75) 50%,
+      hsla(210, 30%, 5%, 0.45) 100%
+    );
+  }
+
+  [dir='rtl'] .hero-overlay {
+    background: linear-gradient(
+      to left,
+      hsla(210, 30%, 5%, 0.92) 0%,
+      hsla(210, 30%, 5%, 0.75) 50%,
+      hsla(210, 30%, 5%, 0.45) 100%
+    );
+  }
+
+  .glass {
+    background: hsla(0, 0%, 100%, 0.10);
+    backdrop-filter: blur(10px);
+    border: 1px solid hsla(0, 0%, 100%, 0.20);
+  }
+
+  .btn-accent {
+    @apply px-6 py-3 font-semibold rounded-lg bg-accent text-accent-foreground shadow-lg;
+  }
+
+  .btn-outline {
+    @apply px-6 py-3 font-semibold rounded-lg border border-white/40 text-white hover:bg-white/10 transition;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 font-semibold rounded-lg bg-primary text-primary-foreground shadow-lg;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-extrabold;
+  }
+
+  .section-subtitle {
+    @apply text-muted-foreground max-w-2xl mx-auto;
+  }
+
+  .divider-accent {
+    @apply w-20 h-1 bg-accent mx-auto mt-6;
+  }
+}
