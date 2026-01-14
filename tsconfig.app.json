@@ -20,6 +20,27 @@
     "paths": {
       "@/*": [
         "./src/*"
+      ],
+      "@assets/*": [
+        "./src/assets/*"
+      ],
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@sections/*": [
+        "./src/components/sections/*"
+      ],
+      "@layout/*": [
+        "./src/components/layout/*"
+      ],
+      "@contexts/*": [
+        "./src/contexts/*"
+      ],
+      "@content/*": [
+        "./src/content/*"
+      ],
+      "@pages/*": [
+        "./src/pages/*"
       ]
     }
   },
