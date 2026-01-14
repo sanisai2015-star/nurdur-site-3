@@ -265,7 +265,7 @@ function CapabilityTabs({ lang }: { lang: "en" | "ar" }) {
   );
 }
 
-function Info({ title, lines }: { title: string; lines: string[] }) {
+function Info({ title, lines }: { title: string; lines: readonly string[] }) {
   return (
     <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
       <div className="text-sm text-white/60">{title}</div>
